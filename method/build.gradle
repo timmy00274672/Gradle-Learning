@@ -1,0 +1,8 @@
+task test << {
+	def files = file('.').listFiles().sort()
+    files.each { File file ->
+        if (file.isFile()) {
+            println " *** $file.name ***"
+        }
+    }
+}
