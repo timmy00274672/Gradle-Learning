@@ -1,0 +1,10 @@
+task test{
+	project.ext.set("myProp", "myValue")
+
+	println '1' + project.myProp
+	
+	project.myProp = "anotherValue"
+
+	println '2' + project.myProp
+	println '3' + project.ext.get("myProp")
+}
